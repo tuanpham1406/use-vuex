@@ -9,7 +9,10 @@ export const store = new Vuex.Store({
     },
     getters: {
         tenResult: state => {
-            return state.result*10;
+            return state.result * 10;
+        },
+        nameResult: state => {
+            return state.result + " name product ";
         }
     }
 });
