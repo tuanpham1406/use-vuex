@@ -1,13 +1,15 @@
 <template>
-    <p>This is result: {{ result }}</p>
+    <div>
+        <p>This is name result: {{nameResult}}</p>
+    </div>
 </template>
 
 <script>
+    import {mapGetters} from 'vuex'
+
     export default {
         computed: {
-            result() {
-                return this.$store.state.result;
-            }
+            ...mapGetters(["nameResult"])
         }
     }
 </script>
