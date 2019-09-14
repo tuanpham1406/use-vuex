@@ -13,7 +13,7 @@
         },
         methods: {
             increment() {
-                this.$store.state.result++;
+                this.$store.commit("incrementOption", 30);
             },
             decrement() {
                 this.$store.state.result--;
