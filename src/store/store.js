@@ -4,7 +4,12 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
-   state: {
-       result: 0
-   }
+    state: {
+        result: 0
+    },
+    getters: {
+        tenResult: state => {
+            return state.result*10;
+        }
+    }
 });
