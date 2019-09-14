@@ -6,6 +6,7 @@
 </template>
 
 <script>
+    import {mapMutations} from 'vuex'
     export default {
         data() {
             return {
@@ -15,9 +16,7 @@
             increment() {
                 this.$store.commit("incrementOption", 30);
             },
-            decrement() {
-                this.$store.state.result--;
-            }
+            ...mapMutations(['decrement'])
         }
     }
 </script>
