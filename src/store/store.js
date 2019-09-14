@@ -2,27 +2,19 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import Result from './modules/Result'
 
+import * as getters from './modules/getters'
+import * as mutations from './modules/mutations'
+import * as actions from './modules/actions'
+
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
         value: ""
     },
-    getters: {
-        value: state => {
-            return state.value
-        }
-    },
-    mutations: {
-        updateValue: (state, payload) => {
-            state.value = payload
-        }
-    },
-    actions: {
-        updateValue: ({commit}, payload) => {
-            commit("updateValue", payload);
-        }
-    },
+    getters,
+    mutations,
+    actions,
     modules: {
         Result
     }
