@@ -6,7 +6,7 @@
     export default {
         computed: {
             result() {
-                return this.$store.getters.tenResult;
+                return this.$store.state.result;
             }
         }
     }
